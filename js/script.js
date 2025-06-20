@@ -173,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.querySelector('.next-btn');
     const dots = document.querySelectorAll('.dot');
     let currentTestimonial = 0;
+    let testimonialInterval;
     
     // Function to show testimonial by index
     function showTestimonial(index) {
@@ -192,31 +193,83 @@ document.addEventListener('DOMContentLoaded', () => {
         currentTestimonial = index;
     }
     
+    // Function to adjust testimonial container height
+    function adjustTestimonialContainerHeight() {
+        const container = document.querySelector('.testimonial-container');
+        const activeCard = document.querySelector('.testimonial-card.active');
+        
+        if (container && activeCard) {
+            const cardHeight = activeCard.offsetHeight;
+            container.style.height = `${cardHeight}px`;
+        }
+    }
+    
+    // Reset auto advance timer when user interacts with testimonials
+    function resetTestimonialTimer() {
+        clearInterval(testimonialInterval);
+        startTestimonialTimer();
+    }
+    
+    // Start auto advance timer
+    function startTestimonialTimer() {
+        testimonialInterval = setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+            showTestimonial(currentTestimonial);
+        }, 8000); // Increased to 8 seconds for better user experience
+    }
+    
     // Next button click
-    nextBtn.addEventListener('click', () => {
-        currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
-        showTestimonial(currentTestimonial);
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+            showTestimonial(currentTestimonial);
+            resetTestimonialTimer();
+        });
+    }
     
     // Previous button click
-    prevBtn.addEventListener('click', () => {
-        currentTestimonial = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
-        showTestimonial(currentTestimonial);
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
+            showTestimonial(currentTestimonial);
+            resetTestimonialTimer();
+        });
+    }
     
     // Dot click
-    dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-            const index = parseInt(dot.getAttribute('data-index'));
-            showTestimonial(index);
+    if (dots) {
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-index'));
+                if (!isNaN(index)) {
+                    showTestimonial(index);
+                    resetTestimonialTimer();
+                }
+            });
         });
-    });
+    }
     
-    // Auto advance testimonials every 5 seconds
-    setInterval(() => {
-        currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
-        showTestimonial(currentTestimonial);
-    }, 5000);
+    // Initialize testimonial slider
+    if (testimonialCards.length > 0) {
+        // Show first testimonial
+        showTestimonial(0);
+        // Start auto advance timer
+        startTestimonialTimer();
+    }
+    
+    // Call the function initially and when window resizes
+    if (document.querySelector('.testimonial-container')) {
+        window.addEventListener('load', adjustTestimonialContainerHeight);
+        window.addEventListener('resize', adjustTestimonialContainerHeight);
+        
+        // Also adjust height when testimonial changes
+        const originalShowTestimonial = showTestimonial;
+        showTestimonial = function(index) {
+            originalShowTestimonial(index);
+            // Wait for the transition to complete
+            setTimeout(adjustTestimonialContainerHeight, 600);
+        }
+    }
     
     // Project Modals
     const projectModalOverlay = document.getElementById('projectModalOverlay');
