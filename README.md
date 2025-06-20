@@ -1,16 +1,15 @@
-# Portfolio Website
+# Jojo Johnson - Portfolio Website
 
-A clean, elegant portfolio website built with HTML, CSS, and JavaScript. This website is designed to showcase your skills, projects, and contact information in a professional manner.
+A clean, elegant portfolio website built with HTML, CSS, and JavaScript, designed to showcase my skills as a Java Backend Developer. This website is hosted on GitHub Pages.
 
 ## Features
 
 - Responsive design that works on all devices
-- Clean and modern UI
-- Smooth scrolling navigation
-- Project filtering by category
-- Skills showcase with progress bars
-- Contact form
-- Animated sections
+- Clean and modern UI with smooth animations
+- Detailed skills section showcasing Java, Python, and Golang expertise
+- Projects section with category filtering
+- Certifications and languages spoken sections
+- Functional contact form using Formspree
 - Mobile-friendly navigation
 
 ## Sections
@@ -21,22 +20,24 @@ A clean, elegant portfolio website built with HTML, CSS, and JavaScript. This we
 4. **Skills** - Visual representation of your technical skills
 5. **Contact** - Contact form and information
 
-## Setup for GitHub Pages
+## GitHub Pages Setup
 
-1. Create a GitHub repository named `username.github.io` (replace "username" with your GitHub username)
-2. Initialize Git in this folder:
-   ```
-   git init
-   git add .
-   git commit -m "Initial commit"
-   ```
-3. Connect to your GitHub repository:
-   ```
-   git remote add origin https://github.com/username/username.github.io.git
-   git branch -M main
-   git push -u origin main
-   ```
-4. Your portfolio will be live at `https://username.github.io`
+This site is configured to be hosted on GitHub Pages. Here's how it's set up:
+
+1. The repository should be named `j4real2208.github.io` for proper GitHub Pages setup
+2. The site is automatically deployed from the `main` branch
+3. DNS settings are configured in the CNAME file (if using a custom domain)
+4. Form submissions are handled by Formspree
+
+To update the website:
+```bash
+# Make your changes locally
+git add .
+git commit -m "Description of changes"
+git push origin main
+```
+
+The website will be automatically updated at https://j4real2208.github.io or your custom domain.
 
 ## Customization
 
@@ -76,4 +77,4 @@ To run this website locally:
 
 ---
 
-Created with ❤️ by [Your Name]
+Created with ❤️ by Jojo Johnson

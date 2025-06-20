@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Backend Developer Portfolio</title>
+    <meta name="description" content="Jojo Johnson - Java Backend Developer specializing in microservices, APIs, and scalable solutions">
+    <meta name="keywords" content="Java Developer, Backend Developer, Microservices, API, Spring, Kubernetes, Docker">
+    <meta name="author" content="Jojo Johnson">
+    <meta name="theme-color" content="#0077b6" id="themeColor">
+    <title>Jojo Johnson | Java Backend Developer</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+            <div class="loading-text">Loading...</div>
+        </div>
+    </div>
+
     <header>
         <nav>
             <div class="logo">
@@ -24,8 +40,11 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -34,15 +53,31 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Hello, I'm <span class="highlight">Your Name</span></h1>
+                <h1>Hello, I'm <span class="highlight typing-text"> Jojo Johnson</span></h1>
                 <p class="profession">Java & Backend Developer</p>
-                <p class="intro">I build robust, scalable, and efficient software systems and applications.</p>
+                <div class="hero-subtitle">
+                    <p class="intro">I build</p>
+                    <div class="dynamic-text-wrapper">
+                        <span class="dynamic-text visible">robust microservices</span>
+                        <span class="dynamic-text">scalable APIs</span>
+                        <span class="dynamic-text">efficient systems</span>
+                        <span class="dynamic-text">cloud-native apps</span>
+                    </div>
+                </div>
+                <div class="tech-stack-icons">
+                    <i class="fab fa-java" title="Java"></i>
+                    <i class="fab fa-python" title="Python"></i>
+                    <i class="fab fa-golang" title="Golang"></i>
+                    <i class="fas fa-cloud" title="Cloud"></i>
+                    <i class="fab fa-docker" title="Docker"></i>
+                </div>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn primary-btn">View My Work</a>
                     <a href="#contact" class="btn secondary-btn">Contact Me</a>
                 </div>
             </div>
         </div>
+        <div class="hero-shape"></div>
     </section>
 
     <section id="about" class="about">
@@ -51,8 +86,27 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="image-placeholder">
-                        <!-- Replace with your image -->
-                        <i class="fas fa-user-circle"></i>
+                        <!-- Your profile image with lazy loading -->
+                        <img src="img/photo_jj.JPG" alt="Jojo Johnson" class="profile-image" loading="lazy">
+                    </div>
+                    
+                    <div class="personal-details">
+                        <div class="detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>jojo4820@live.com</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bamberg, Bavaria, Germany</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Degree in Computer Science</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>01746712321</span>
+                        </div>
                     </div>
                 </div>
                 <div class="about-text">
@@ -79,25 +133,97 @@
                         </ul>
                     </div>
                     
-                    <div class="personal-details">
-                        <div class="detail">
-                            <i class="fas fa-envelope"></i>
-                            <span>yourname@example.com</span>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>City, Country</span>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Degree in Computer Science</span>
+                    <div class="resume-download">
+                        <h4><i class="fas fa-file-alt"></i> My Resume</h4>
+                        <p>Download my resume to learn more about my experience, education, and qualifications.</p>
+                        <a href="files/jj_res_2025.pdf" download class="btn primary-btn resume-btn">
+                            <i class="fas fa-file-pdf"></i> Download Resume
+                        </a>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/j4real2208" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jojojohnson4820/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Software Developer</h3>
+                        <h4>IBM Germany Research & Development, Böblingen</h4>
+                        <p>Design and maintain IBM CloudPak for Business Automation solutions, leveraging Kubernetes clusters to enable scalable SaaS product delivery. Optimize deployment pipelines for IBM's enterprise automation tools, enhancing system resilience and reducing downtime by 20%. Collaborate with global teams to integrate cloud-native architectures, strengthening interoperability across IBM's product suite.</p>
+                        <div class="timeline-tech-stack">
+                            <span>Kubernetes</span>
+                            <span>CloudPak</span>
+                            <span>SaaS</span>
+                            <span>Cloud-Native</span>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" title="Download CV" class="cv-link"><i class="fas fa-download"></i> Download CV</a>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Research Assistant – EXPLANYM Project</h3>
+                        <h4>Otto-Friedrich-University Bamberg (HIWI), Bamberg</h4>
+                        <p>Spearhead IT infrastructure for a multi-modal transport research initiative, refactoring a Flutter app to streamline data collection for the City of Bamberg. Deploy and manage CIVITAS CORE Connect on a dedicated Kubernetes instance, ensuring secure hosting of urban mobility data. Coordinate with municipal partners to align technical deliverables with sustainability goals, bridging academia and civic tech.</p>
+                        <div class="timeline-tech-stack">
+                            <span>Flutter</span>
+                            <span>Kubernetes</span>
+                            <span>CIVITAS</span>
+                            <span>Urban Mobility</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>Software Developer</h3>
+                        <h4>IBM India Private Limited, Kerala</h4>
+                        <p>Engineered 99.9% uptime for Kafka clusters, reducing deployment time by 90% and ensuring operational excellence. Spearheaded integration of two IBM Automation products, boosting compatibility by 30% and increasing reliability by 70%. Developed API backend with 100% code coverage, improving response time by 60% and aligning teams via Open API specifications.</p>
+                        <div class="timeline-tech-stack">
+                            <span>Kafka</span>
+                            <span>IBM CloudPaks</span>
+                            <span>Microservices</span>
+                            <span>Keycloak</span>
+                        </div>
+                        <div class="timeline-achievements">
+                            <span>Automated product version handoffs, reducing process time from 7 days to 1 day</span>
+                            <span>Optimized build processes, cutting build time by 50%</span>
+                            <span>Implemented OIDC authentication for securing microservices</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2019</div>
+                    <div class="timeline-content">
+                        <h3>Network Engineer Apprentice</h3>
+                        <h4>Spectrum Softtech Solutions Pvt. Ltd, Kerala</h4>
+                        <p>Automated network host configuration, reducing setup time by 90%. Analyzed network node reports, ensuring 95% network uptime. Orchestrated team efforts, improving network performance by 25%.</p>
+                        <div class="timeline-tech-stack">
+                            <span>Network Configuration</span>
+                            <span>Automation</span>
+                            <span>System Analysis</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,75 +235,248 @@
             <h2 class="section-title">My Projects</h2>
             <div class="project-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="microservice">Microservices</button>
+                <button class="filter-btn" data-filter="api">APIs</button>
+                <button class="filter-btn" data-filter="devops">DevOps</button>
             </div>
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="microservice">
                     <div class="project-img">
                         <div class="img-placeholder">
-                            <i class="fas fa-code"></i>
+                            <i class="fas fa-network-wired"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Project Name</h3>
-                        <p>A brief description of the project and its functionality. Explain what technologies were used.</p>
+                        <h3>E-Commerce Microservices</h3>
+                        <p>A scalable e-commerce backend with independent services for product catalog, inventory, orders, and payments. Implemented message queues for asynchronous communication between services.</p>
                         <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Kafka</span>
+                            <span>Docker</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" title="View Live"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/j4real2208/ecommerce-microservices" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-details-btn" title="View Details" data-id="project1"><i class="fas fa-info-circle"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 2 -->
-                <div class="project-card" data-category="mobile">
+                <div class="project-card" data-category="api">
                     <div class="project-img">
                         <div class="img-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
+                            <i class="fas fa-cloud"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Mobile App</h3>
-                        <p>A mobile application built with modern frameworks. This shows my ability to create cross-platform applications.</p>
+                        <h3>Banking API Platform</h3>
+                        <p>A secure REST API platform for banking operations with JWT authentication, rate limiting, and comprehensive documentation. Implemented hexagonal architecture for better maintainability.</p>
                         <div class="project-tags">
-                            <span>React Native</span>
-                            <span>Firebase</span>
+                            <span>Java</span>
+                            <span>Spring Security</span>
+                            <span>Swagger</span>
+                            <span>JUnit</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" title="View Live"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/j4real2208/banking-api" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-details-btn" title="View Details" data-id="project2"><i class="fas fa-info-circle"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 3 -->
-                <div class="project-card" data-category="design">
+                <div class="project-card" data-category="devops">
                     <div class="project-img">
                         <div class="img-placeholder">
-                            <i class="fas fa-paint-brush"></i>
+                            <i class="fas fa-dharmachakra"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Design Project</h3>
-                        <p>A design project showcasing UI/UX skills and creative thinking. Created with modern design principles.</p>
+                        <h3>CI/CD Pipeline for Microservices</h3>
+                        <p>Designed and implemented a comprehensive CI/CD pipeline for microservices deployment. Features automatic testing, Docker image building, and Kubernetes deployment.</p>
                         <div class="project-tags">
-                            <span>Figma</span>
-                            <span>UI/UX</span>
+                            <span>Jenkins</span>
+                            <span>Kubernetes</span>
+                            <span>Docker</span>
+                            <span>Terraform</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" title="View Design"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/j4real2208/kube-cicd" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-details-btn" title="View Details" data-id="project3"><i class="fas fa-info-circle"></i></a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Add more project cards as needed -->
+                <!-- Project 4 -->
+                <div class="project-card" data-category="api">
+                    <div class="project-img">
+                        <div class="img-placeholder">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Real-Time Data Processing</h3>
+                        <p>Developed a high-throughput system for processing and analyzing streaming data with Apache Kafka and Spring Cloud Stream. Includes monitoring and alerting capabilities.</p>
+                        <div class="project-tags">
+                            <span>Kafka Streams</span>
+                            <span>Spring Boot</span>
+                            <span>Prometheus</span>
+                            <span>Grafana</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/j4real2208/stream-processor" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-details-btn" title="View Details" data-id="project4"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Detail Modals -->
+            <div class="project-modal-overlay" id="projectModalOverlay"></div>
+            
+            <!-- Project 1 Modal -->
+            <div class="project-modal" id="project1Modal">
+                <div class="modal-header">
+                    <h3>E-Commerce Microservices</h3>
+                    <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Description:</strong> A complete e-commerce backend system built with a microservices architecture. The system consists of independent services for product management, inventory control, order processing, and payment handling.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Service discovery and registration with Eureka</li>
+                        <li>API Gateway for centralized routing and security</li>
+                        <li>Event-driven architecture using Apache Kafka</li>
+                        <li>Distributed tracing with Spring Cloud Sleuth and Zipkin</li>
+                        <li>Circuit breaking pattern with Resilience4j</li>
+                        <li>Containerized with Docker and orchestrated with Kubernetes</li>
+                    </ul>
+                    
+                    <h4>Technical Details:</h4>
+                    <ul>
+                        <li>Implemented the CQRS pattern for better scalability</li>
+                        <li>Used Spring Cloud Config for centralized configuration management</li>
+                        <li>Implemented OAuth2 authentication with Keycloak</li>
+                        <li>Comprehensive test coverage with JUnit and Testcontainers</li>
+                    </ul>
+                    
+                    <h4>Results & Impact:</h4>
+                    <ul>
+                        <li>Reduced system latency by 40% compared to the monolithic predecessor</li>
+                        <li>Improved scalability allowing the system to handle 3x the previous transaction volume</li>
+                        <li>Enhanced developer productivity with independent service deployment</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Project 2 Modal -->
+            <div class="project-modal" id="project2Modal">
+                <div class="modal-header">
+                    <h3>Banking API Platform</h3>
+                    <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Description:</strong> A secure RESTful API platform for banking operations that supports account management, transactions, and reporting functionalities.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Secure authentication with JWT and OAuth2</li>
+                        <li>Two-factor authentication for sensitive operations</li>
+                        <li>Comprehensive API documentation with Swagger/OpenAPI</li>
+                        <li>Rate limiting and throttling to prevent abuse</li>
+                        <li>Audit logging for compliance requirements</li>
+                    </ul>
+                    
+                    <h4>Technical Details:</h4>
+                    <ul>
+                        <li>Implemented hexagonal architecture for better separation of concerns</li>
+                        <li>Used Spring Data JPA with optimized database interactions</li>
+                        <li>Implemented custom validators and exception handlers</li>
+                        <li>Comprehensive test suite with unit, integration, and contract tests</li>
+                    </ul>
+                    
+                    <h4>Results & Impact:</h4>
+                    <ul>
+                        <li>Successfully passed security audit with zero critical vulnerabilities</li>
+                        <li>Decreased development time for new features by 35%</li>
+                        <li>Improved system reliability with 99.99% uptime</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Project 3 Modal -->
+            <div class="project-modal" id="project3Modal">
+                <div class="modal-header">
+                    <h3>CI/CD Pipeline for Microservices</h3>
+                    <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Description:</strong> A complete CI/CD pipeline for automating the build, test, and deployment process of microservices to Kubernetes clusters.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Automated build triggering on code commits</li>
+                        <li>Multi-stage builds with dependency caching</li>
+                        <li>Comprehensive testing at each stage</li>
+                        <li>Automated vulnerability scanning of Docker images</li>
+                        <li>Blue/Green deployment strategy for zero-downtime updates</li>
+                    </ul>
+                    
+                    <h4>Technical Details:</h4>
+                    <ul>
+                        <li>Jenkins pipelines defined as code</li>
+                        <li>Infrastructure as Code with Terraform</li>
+                        <li>Helm charts for Kubernetes deployments</li>
+                        <li>Monitoring and alerting with Prometheus and Grafana</li>
+                    </ul>
+                    
+                    <h4>Results & Impact:</h4>
+                    <ul>
+                        <li>Reduced deployment time from hours to minutes</li>
+                        <li>Eliminated deployment-related downtime</li>
+                        <li>Improved code quality through automated testing and security scanning</li>
+                        <li>Streamlined developer workflow and increased productivity</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Project 4 Modal -->
+            <div class="project-modal" id="project4Modal">
+                <div class="modal-header">
+                    <h3>Real-Time Data Processing</h3>
+                    <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Description:</strong> A high-performance system for processing and analyzing streaming data in real-time, capable of handling millions of events per second.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Real-time data ingestion and processing</li>
+                        <li>Complex event processing with sliding time windows</li>
+                        <li>Dynamic scaling based on workload</li>
+                        <li>Real-time dashboards for monitoring data flows</li>
+                        <li>Anomaly detection with configurable alerting</li>
+                    </ul>
+                    
+                    <h4>Technical Details:</h4>
+                    <ul>
+                        <li>Implemented with Kafka Streams and Spring Cloud Stream</li>
+                        <li>Used the KTable and KStream abstractions for stateful processing</li>
+                        <li>Custom serialization/deserialization for optimal performance</li>
+                        <li>Integration with Prometheus and Grafana for monitoring</li>
+                    </ul>
+                    
+                    <h4>Results & Impact:</h4>
+                    <ul>
+                        <li>Processed over 1 million events per second with sub-second latency</li>
+                        <li>Reduced data processing costs by 45% compared to previous solution</li>
+                        <li>Enabled new business capabilities through real-time insights</li>
+                        <li>Provided critical alerting that prevented several potential system outages</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -289,6 +588,137 @@
         </div>
     </section>
 
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-container">
+                    <!-- Testimonial 1 - Manager's Recommendation -->
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>I've had the pleasure of working with Jojo Johnson on the IBM Event Automation team, and I can confidently say that he is an exceptional developer and leader. Jojo is not just focused on delivering product capabilities—he is deeply passionate about driving success through innovation and teamwork.</p>
+                            <p>Jojo's expertise on Strimzi, the Open Source operator behind Event Streams, is impressive and has been pivotal to the team's success. What truly distinguishes him is his dedication to fostering a collaborative and growth-oriented culture.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="img/1725631251952.jpeg" alt="Suraj CS" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <h4>Suraj CS</h4>
+                                <p>Engineering Manager, IBM Event Automation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>Jojo has made a significant impact across operations and deployments of the Event Streams component, a key backbone of the Event Automation product suite. He led the development of crucial integrations with third-party authenticators, improved user and admin functions, and enhanced the product's CLI and REST interfaces.</p>
+                            <p>His proactive mindset, team coordination skills, and relentless pursuit of excellence make him an invaluable asset to any organization.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="img/1725631251952.jpeg" alt="Suraj CS" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <h4>Suraj CS</h4>
+                                <p>Engineering Manager, IBM Event Automation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>What sets Jojo apart is how he consistently organizes educational sessions, encourages product enhancements, reduces tech debt, and inspires continuous improvement across the team. I highly recommend him for any future roles in event-driven architectures, operations, or development teams.</p>
+                            <p>Would like to work with him again whenever possible, and wish him great luck on his academic and career pursuits in future!</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="img/1725631251952.jpeg" alt="Suraj CS" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <h4>Suraj CS</h4>
+                                <p>Engineering Manager, IBM Event Automation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                    <button class="testimonial-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Technical Articles</h2>
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://picsum.photos/seed/java1/600/400" alt="Microservices Architecture" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-tag">Architecture</div>
+                        <h3>Implementing Event-Driven Microservices with Spring Boot and Apache Kafka</h3>
+                        <p>A deep dive into building robust microservices with event-driven architecture using Spring Boot and Apache Kafka.</p>
+                        <div class="blog-footer">
+                            <span class="blog-date">May 15, 2025</span>
+                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://picsum.photos/seed/java2/600/400" alt="Kubernetes Deployment" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-tag">DevOps</div>
+                        <h3>Zero-Downtime Deployments in Kubernetes with Spring Boot Applications</h3>
+                        <p>Learn how to implement zero-downtime deployments for your Spring Boot applications running in Kubernetes.</p>
+                        <div class="blog-footer">
+                            <span class="blog-date">April 3, 2025</span>
+                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://picsum.photos/seed/java3/600/400" alt="API Security" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-tag">Security</div>
+                        <h3>Best Practices for Securing RESTful APIs with Spring Security and OAuth2</h3>
+                        <p>Comprehensive guide to implementing robust security for your APIs with Spring Security and OAuth2.</p>
+                        <div class="blog-footer">
+                            <span class="blog-date">March 21, 2025</span>
+                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-cta">
+                <a href="#" class="btn secondary-btn">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Contact Me</h2>
@@ -298,31 +728,33 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3>Email</h3>
-                            <p>yourname@example.com</p>
+                            <p>jojo4820@live.com</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h3>Location</h3>
-                            <p>City, Country</p>
+                            <h3>Bamberg</h3>
+                            <p>Bavaria, Germany</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone-alt"></i>
                         <div>
                             <h3>Phone</h3>
-                            <p>(Optional) Your phone number</p>
+                            <p>01746712321</p>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/j4real2208" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jojojohnson4820/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/xgegjoae" method="POST">
+                        <input type="hidden" name="_subject" value="New message from Portfolio Website">
+                        <input type="text" name="_gotcha" style="display:none">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
@@ -345,10 +777,10 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; <span id="currentYear"></span> Your Name. All rights reserved.</p>
+                <p>&copy; <span id="currentYear"></span> Jojo Johnson. All rights reserved.</p>
                 <div class="social-links">
-                    <a href="https://github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/j4real2208" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jojojohnson4820/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
@@ -358,6 +790,10 @@
     <a href="#home" class="scroll-to-top">
         <i class="fas fa-arrow-up"></i>
     </a>
+
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

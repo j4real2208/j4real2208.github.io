@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0077b6" id="themeColor">
+    <title>Page Not Found | Jojo Johnson</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <style>
+        .error-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .error-message {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+        .error-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+        .home-link {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-message">Page Not Found</h1>
+        <p class="error-description">The page you are looking for doesn't exist or has been moved.</p>
+        <a href="index.html" class="btn primary-btn home-link">
+            <i class="fas fa-home"></i> Back to Homepage
+        </a>
+    </div>
+
+    <script>
+        // Apply dark mode if saved in local storage
+        const savedTheme = localStorage.getItem('theme');
+        const themeColorMeta = document.getElementById('themeColor');
+        
+        if (savedTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'dark');
+            themeColorMeta.setAttribute('content', '#00b4d8');
+        }
+        
+        // Add transition class for smooth theme switching
+        document.body.classList.add('dark-mode-transition');
+    </script>
+</body>
+</html>
