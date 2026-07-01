@@ -8,15 +8,42 @@
     <meta name="author" content="Jojo Johnson">
     <meta name="theme-color" content="#0077b6" id="themeColor">
     <title>Jojo Johnson | Java Backend Developer</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jojo Johnson | Java Backend Developer">
+    <meta property="og:description" content="Java Backend Developer specializing in microservices, APIs, and scalable solutions">
+    <meta property="og:image" content="img/photo_jj.JPG">
+    <meta property="og:url" content="https://jojojohnson.dev/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jojo Johnson | Java Backend Developer">
+    <meta name="twitter:description" content="Java Backend Developer specializing in microservices, APIs, and scalable solutions">
+    <meta name="twitter:image" content="img/photo_jj.JPG">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jojo Johnson",
+      "jobTitle": "Java Backend Developer",
+      "description": "Java & Backend Developer specializing in microservices, APIs, and scalable solutions",
+      "url": "https://jojojohnson.dev/",
+      "image": "img/photo_jj.JPG",
+      "sameAs": [
+        "https://github.com/j4real2208",
+        "https://www.linkedin.com/in/jojojohnson4820/"
+      ]
+    }
+    </script>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
+    <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar"></div></div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="preloader">
         <div class="loader">
             <div class="spinner">
@@ -27,18 +54,19 @@
         </div>
     </div>
 
+    <main id="main-content">
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="logo">
                 <a href="#home">Portfolio</a>
             </div>
-            <div class="menu-toggle">
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav-links">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+            </button>
+            <ul class="nav-links" id="primary-nav-links">
+                <li><a href="#home" aria-current="page">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -50,61 +78,86 @@
         </nav>
     </header>
 
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-labelledby="home-heading">
         <div class="container">
             <div class="hero-content">
-                <h1>Hello, I'm <span class="highlight typing-text"> Jojo Johnson</span></h1>
-                <p class="profession">Java & Backend Developer</p>
-                <div class="hero-subtitle">
-                    <p class="intro">I build</p>
-                    <div class="dynamic-text-wrapper">
-                        <span class="dynamic-text visible">robust microservices</span>
-                        <span class="dynamic-text">scalable APIs</span>
-                        <span class="dynamic-text">efficient systems</span>
-                        <span class="dynamic-text">cloud-native apps</span>
+                <div class="hero-text">
+                    <h1 id="home-heading">Hello, I'm <span class="highlight typing-text"> Jojo Johnson</span></h1>
+                    <p class="profession">Java & Backend Developer</p>
+                    <div class="hero-subtitle">
+                        <p class="intro">I build</p>
+                        <div class="dynamic-text-wrapper">
+                            <span class="dynamic-text visible">robust microservices</span>
+                            <span class="dynamic-text">scalable APIs</span>
+                            <span class="dynamic-text">efficient systems</span>
+                            <span class="dynamic-text">cloud-native apps</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack-icons">
+                        <i class="fab fa-java" title="Java" aria-hidden="true"></i>
+                        <i class="fab fa-python" title="Python" aria-hidden="true"></i>
+                        <i class="fab fa-golang" title="Golang" aria-hidden="true"></i>
+                        <i class="fas fa-cloud" title="Cloud" aria-hidden="true"></i>
+                        <i class="fab fa-docker" title="Docker" aria-hidden="true"></i>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary-btn"><i class="fas fa-folder-open" aria-hidden="true"></i> View My Work</a>
+                        <a href="#contact" class="btn secondary-btn"><i class="fas fa-paper-plane" aria-hidden="true"></i> Contact Me</a>
                     </div>
                 </div>
-                <div class="tech-stack-icons">
-                    <i class="fab fa-java" title="Java"></i>
-                    <i class="fab fa-python" title="Python"></i>
-                    <i class="fab fa-golang" title="Golang"></i>
-                    <i class="fas fa-cloud" title="Cloud"></i>
-                    <i class="fab fa-docker" title="Docker"></i>
-                </div>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary-btn">View My Work</a>
-                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                <div class="hero-photo">
+                    <div class="hero-photo-ring">
+                        <img src="img/photo_jj.JPG" alt="Jojo Johnson, Java backend developer" class="hero-photo-img" width="360" height="360" fetchpriority="high" decoding="async">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="hero-shape"></div>
     </section>
 
-    <section id="about" class="about">
+    <section id="about" class="about" aria-labelledby="about-heading">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-eyebrow" aria-hidden="true">01 — About</div>
+            <h2 id="about-heading" class="section-title">About Me</h2>
+            <div class="stats-row" aria-label="Quick stats">
+                <div class="stat-item" role="group" aria-label="5 plus years of experience">
+                    <span class="stat-number" data-target="5" data-suffix="+">5+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item" role="group" aria-label="4 plus projects built">
+                    <span class="stat-number" data-target="4" data-suffix="+">4+</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat-item" role="group" aria-label="3 languages spoken">
+                    <span class="stat-number" data-target="3">3</span>
+                    <span class="stat-label">Languages Spoken</span>
+                </div>
+                <div class="stat-item" role="group" aria-label="2 countries worked in">
+                    <span class="stat-number" data-target="2">2</span>
+                    <span class="stat-label">Countries Worked</span>
+                </div>
+            </div>
             <div class="about-content">
                 <div class="about-image">
-                    <div class="image-placeholder">
-                        <!-- Your profile image with lazy loading -->
-                        <img src="img/photo_jj.JPG" alt="Jojo Johnson" class="profile-image" loading="lazy">
+                    <div class="image-placeholder about-photo-ring">
+                        <img src="img/photo_jj.JPG" alt="Jojo Johnson, Java backend developer" class="profile-image" loading="lazy" decoding="async" width="400" height="400">
                     </div>
                     
                     <div class="personal-details">
                         <div class="detail">
-                            <i class="fas fa-envelope"></i>
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
                             <span>jojo4820@live.com</span>
                         </div>
                         <div class="detail">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                             <span>Bamberg, Bavaria, Germany</span>
                         </div>
                         <div class="detail">
-                            <i class="fas fa-graduation-cap"></i>
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                             <span>Degree in Computer Science</span>
                         </div>
                         <div class="detail">
-                            <i class="fas fa-phone-alt"></i>
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
                             <span>01746712321</span>
                         </div>
                     </div>
@@ -114,54 +167,89 @@
                     <p>With a strong foundation in software architecture and enterprise applications, I bring ideas to life using modern technologies like Spring, Kubernetes, and Docker.</p>
                     <p>When I'm not coding, you can find me exploring new cloud technologies, contributing to open-source projects, or enhancing my knowledge in distributed systems.</p>
                     
-                    <div class="certifications">
-                        <h4><i class="fas fa-certificate"></i> Certifications</h4>
-                        <ul>
-                            <li>AWS Certified Solutions Architect - Associate Training</li>
-                            <li>RedHat OpenShift: DO285 (Issued: Feb 2022), DO378 (Issued: Jul 2022)</li>
-                            <li>IBM Developer Profession Level 1 (Issued: Jun 2024)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="languages">
-                        <h4><i class="fas fa-language"></i> Languages Spoken</h4>
-                        <ul>
-                            <li>Malayalam (Native)</li>
-                            <li>English (C1)</li>
-                            <li>Hindi (C1)</li>
-                            <li>German (A2)</li>
-                        </ul>
+                    <div class="about-credentials">
+                        <div class="certifications">
+                            <h4><i class="fas fa-certificate" aria-hidden="true"></i> Certifications</h4>
+                            <ul>
+                                <li>AWS Certified Solutions Architect - Associate Training</li>
+                                <li>RedHat OpenShift: DO285 (Issued: Feb 2022), DO378 (Issued: Jul 2022)</li>
+                                <li>IBM Developer Profession Level 1 (Issued: Jun 2024)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="languages">
+                            <h4><i class="fas fa-language" aria-hidden="true"></i> Languages Spoken</h4>
+                            <ul>
+                                <li>Malayalam (Native)</li>
+                                <li>English (C1)</li>
+                                <li>Hindi (C1)</li>
+                                <li>German (A2)</li>
+                            </ul>
+                        </div>
                     </div>
                     
                     <div class="resume-download">
-                        <h4><i class="fas fa-file-alt"></i> My Resume</h4>
+                        <h4><i class="fas fa-file-alt" aria-hidden="true"></i> My Resume</h4>
                         <p>Download my resume to learn more about my experience, education, and qualifications.</p>
                         <a href="files/jj_res_2025.pdf" download class="btn primary-btn resume-btn">
-                            <i class="fas fa-file-pdf"></i> Download Resume
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i> Download Resume
                         </a>
                     </div>
                     
                     <div class="social-links">
-                        <a href="https://github.com/j4real2208" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/jojojohnson4820/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/j4real2208" target="_blank" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span></a>
+                        <a href="https://www.linkedin.com/in/jojojohnson4820/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
+                        <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="experience">
+    <section id="experience" class="experience" aria-labelledby="experience-heading">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
+            <div class="section-eyebrow" aria-hidden="true">02 — Experience</div>
+            <h2 id="experience-heading" class="section-title">Work Experience</h2>
             <div class="timeline">
                 <!-- Experience 1 -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">2025 - Present</div>
+                    <div class="timeline-date">Jun 2026 - Present</div>
                     <div class="timeline-content">
-                        <h3>Software Developer</h3>
-                        <h4>IBM Germany Research & Development, Böblingen</h4>
+                        <div class="timeline-header">
+                            <div class="timeline-role">
+                                <h3>Thesis Student</h3>
+                                <span class="timeline-company">Otto-Friedrich-Universität Bamberg</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="badge badge-fulltime">Full-time</span>
+                            </div>
+                        </div>
+                        <div class="timeline-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bamberg, Bavaria, Germany · Hybrid</div>
+                        <p>Working on a master's thesis in collaboration with the University of Bamberg, applying research methodologies to real-world software engineering challenges. Focus on scalable backend systems and data-driven urban mobility solutions.</p>
+                        <div class="timeline-tech-stack">
+                            <span>Research</span>
+                            <span>Java</span>
+                            <span>Backend Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">May 2025 - Present</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-role">
+                                <h3>Software Developer</h3>
+                                <span class="timeline-company">IBM</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="badge badge-workstudy">Work Study</span>
+                            </div>
+                        </div>
+                        <div class="timeline-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Ehningen, Baden-Württemberg, Germany · Hybrid</div>
                         <p>Lead architect for IBM CloudPak for Business Automation solutions, orchestrating Kubernetes-based SaaS environments with enterprise-grade resilience. Engineered deployment pipeline optimization that reduced system downtime by 20% and improved release velocity by 35%. Facilitate cross-functional collaboration across global development teams to ensure seamless integration of cloud-native architectures.</p>
                         <div class="timeline-tech-stack">
                             <span>Kubernetes</span>
@@ -172,13 +260,21 @@
                     </div>
                 </div>
                 
-                <!-- Experience 2 -->
+                <!-- Experience 3 -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">2025 - Present</div>
+                    <div class="timeline-date">May 2025 - Present</div>
                     <div class="timeline-content">
-                        <h3>Research Assistant – EXPLANYM Project</h3>
-                        <h4>Otto-Friedrich-University Bamberg (HIWI), Bamberg</h4>
+                        <div class="timeline-header">
+                            <div class="timeline-role">
+                                <h3>Research Staff Member – EXPLANYM Project</h3>
+                                <span class="timeline-company">Otto-Friedrich-Universität Bamberg</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="badge badge-workstudy">Work Study</span>
+                            </div>
+                        </div>
+                        <div class="timeline-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bamberg, Bavaria, Germany · Hybrid</div>
                         <p>Technical lead for the University's flagship urban mobility research initiative, modernizing a Flutter-based data collection platform that increased field researcher productivity by 40%. Implemented and secured a Kubernetes-hosted CIVITAS CORE Connect platform with end-to-end encryption and automated data validation. Established technical partnership framework between academic research teams and municipal stakeholders to drive data-driven urban planning decisions.</p>
                         <div class="timeline-tech-stack">
                             <span>Kubernetes</span>
@@ -194,8 +290,16 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2021 - 2024</div>
                     <div class="timeline-content">
-                        <h3>Software Developer</h3>
-                        <h4>IBM India Private Limited, Kerala</h4>
+                        <div class="timeline-header">
+                            <div class="timeline-role">
+                                <h3>Software Developer</h3>
+                                <span class="timeline-company">IBM India Private Limited</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="badge badge-fulltime">Full-time</span>
+                            </div>
+                        </div>
+                        <div class="timeline-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Kerala, India</div>
                         <p>Architected resilient Kafka cluster infrastructure achieving 99.9% uptime while slashing deployment time by 90%. Led strategic integration of critical IBM Automation products, resulting in 30% higher compatibility across services and 70% increased reliability. Delivered high-performance API backend with comprehensive test coverage that accelerated response times by 60% and standardized team development through Open API specifications.</p>
                         <div class="timeline-tech-stack">
                             <span>Java</span>
@@ -216,8 +320,16 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2019</div>
                     <div class="timeline-content">
-                        <h3>Network Engineer Apprentice</h3>
-                        <h4>Spectrum Softtech Solutions Pvt. Ltd, Kerala</h4>
+                        <div class="timeline-header">
+                            <div class="timeline-role">
+                                <h3>Network Engineer Apprentice</h3>
+                                <span class="timeline-company">Spectrum Softtech Solutions Pvt. Ltd</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="badge badge-apprentice">Apprentice</span>
+                            </div>
+                        </div>
+                        <div class="timeline-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Kerala, India</div>
                         <p>Developed Python-based network configuration automation scripts that reduced host setup time from hours to minutes (90% improvement). Implemented comprehensive network monitoring system that maintained 95% uptime across critical infrastructure. Collaborated with cross-functional teams to optimize network performance, resulting in 25% improved throughput for mission-critical applications.</p>
                         <div class="timeline-tech-stack">
                             <span>Python</span>
@@ -230,21 +342,22 @@
         </div>
     </section>
 
-    <section id="projects" class="projects">
+    <section id="projects" class="projects" aria-labelledby="projects-heading">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="microservice">Microservices</button>
-                <button class="filter-btn" data-filter="api">APIs</button>
-                <button class="filter-btn" data-filter="devops">DevOps</button>
+            <div class="section-eyebrow" aria-hidden="true">03 — Projects</div>
+            <h2 id="projects-heading" class="section-title">My Projects</h2>
+            <div class="project-filters" role="group" aria-label="Project filters">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-btn" data-filter="microservice" aria-pressed="false">Microservices</button>
+                <button class="filter-btn" data-filter="api" aria-pressed="false">APIs</button>
+                <button class="filter-btn" data-filter="devops" aria-pressed="false">DevOps</button>
             </div>
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card" data-category="microservice">
                     <div class="project-img">
                         <div class="img-placeholder">
-                            <i class="fas fa-network-wired"></i>
+                            <i class="fas fa-network-wired" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="project-info">
@@ -257,8 +370,8 @@
                             <span>Docker</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/j4real2208/ecommerce-microservices" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-details-btn" title="View Details" data-id="project1"><i class="fas fa-info-circle"></i></a>
+                            <a href="https://github.com/j4real2208/ecommerce-microservices" target="_blank" title="View Code"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">View Code on GitHub</span></a>
+                            <a href="#" class="project-details-btn" title="View Details" data-id="project1"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="sr-only">View Details</span></a>
                         </div>
                     </div>
                 </div>
@@ -267,7 +380,7 @@
                 <div class="project-card" data-category="api">
                     <div class="project-img">
                         <div class="img-placeholder">
-                            <i class="fas fa-cloud"></i>
+                            <i class="fas fa-cloud" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="project-info">
@@ -280,8 +393,8 @@
                             <span>JUnit</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/j4real2208/banking-api" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-details-btn" title="View Details" data-id="project2"><i class="fas fa-info-circle"></i></a>
+                            <a href="https://github.com/j4real2208/banking-api" target="_blank" title="View Code"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">View Code on GitHub</span></a>
+                            <a href="#" class="project-details-btn" title="View Details" data-id="project2"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="sr-only">View Details</span></a>
                         </div>
                     </div>
                 </div>
@@ -290,7 +403,7 @@
                 <div class="project-card" data-category="devops">
                     <div class="project-img">
                         <div class="img-placeholder">
-                            <i class="fas fa-dharmachakra"></i>
+                            <i class="fas fa-dharmachakra" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="project-info">
@@ -303,8 +416,8 @@
                             <span>Terraform</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/j4real2208/kube-cicd" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-details-btn" title="View Details" data-id="project3"><i class="fas fa-info-circle"></i></a>
+                            <a href="https://github.com/j4real2208/kube-cicd" target="_blank" title="View Code"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">View Code on GitHub</span></a>
+                            <a href="#" class="project-details-btn" title="View Details" data-id="project3"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="sr-only">View Details</span></a>
                         </div>
                     </div>
                 </div>
@@ -313,7 +426,7 @@
                 <div class="project-card" data-category="api">
                     <div class="project-img">
                         <div class="img-placeholder">
-                            <i class="fas fa-exchange-alt"></i>
+                            <i class="fas fa-exchange-alt" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="project-info">
@@ -326,8 +439,8 @@
                             <span>Grafana</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/j4real2208/stream-processor" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-details-btn" title="View Details" data-id="project4"><i class="fas fa-info-circle"></i></a>
+                            <a href="https://github.com/j4real2208/stream-processor" target="_blank" title="View Code"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">View Code on GitHub</span></a>
+                            <a href="#" class="project-details-btn" title="View Details" data-id="project4"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="sr-only">View Details</span></a>
                         </div>
                     </div>
                 </div>
@@ -340,7 +453,7 @@
             <div class="project-modal" id="project1Modal">
                 <div class="modal-header">
                     <h3>E-Commerce Microservices</h3>
-                    <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+                    <button class="modal-close-btn" aria-label="Close dialog"><i class="fas fa-times" aria-hidden="true"></i></button>
                 </div>
                 <div class="modal-body">
                     <p><strong>Description:</strong> A complete e-commerce backend system built with a microservices architecture. The system consists of independent services for product management, inventory control, order processing, and payment handling.</p>
@@ -376,7 +489,7 @@
             <div class="project-modal" id="project2Modal">
                 <div class="modal-header">
                     <h3>Banking API Platform</h3>
-                    <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+                    <button class="modal-close-btn" aria-label="Close dialog"><i class="fas fa-times" aria-hidden="true"></i></button>
                 </div>
                 <div class="modal-body">
                     <p><strong>Description:</strong> A secure RESTful API platform for banking operations that supports account management, transactions, and reporting functionalities.</p>
@@ -411,7 +524,7 @@
             <div class="project-modal" id="project3Modal">
                 <div class="modal-header">
                     <h3>CI/CD Pipeline for Microservices</h3>
-                    <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+                    <button class="modal-close-btn" aria-label="Close dialog"><i class="fas fa-times" aria-hidden="true"></i></button>
                 </div>
                 <div class="modal-body">
                     <p><strong>Description:</strong> A complete CI/CD pipeline for automating the build, test, and deployment process of microservices to Kubernetes clusters.</p>
@@ -447,7 +560,7 @@
             <div class="project-modal" id="project4Modal">
                 <div class="modal-header">
                     <h3>Real-Time Data Processing</h3>
-                    <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+                    <button class="modal-close-btn" aria-label="Close dialog"><i class="fas fa-times" aria-hidden="true"></i></button>
                 </div>
                 <div class="modal-body">
                     <p><strong>Description:</strong> A high-performance system for processing and analyzing streaming data in real-time, capable of handling millions of events per second.</p>
@@ -481,23 +594,24 @@
         </div>
     </section>
 
-    <section id="skills" class="skills">
+    <section id="skills" class="skills" aria-labelledby="skills-heading">
         <div class="container">
-            <h2 class="section-title">My Skills</h2>
+            <div class="section-eyebrow" aria-hidden="true">04 — Skills</div>
+            <h2 id="skills-heading" class="section-title">My Skills</h2>
             <div class="skills-content">
                 <div class="skills-category">
                     <h3>Programming Languages</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-java"></i></div>
+                            <div class="skill-icon"><i class="fab fa-java" aria-hidden="true"></i></div>
                             <h4>Java</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <div class="skill-icon"><i class="fab fa-python" aria-hidden="true"></i></div>
                             <h4>Python</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-golang"></i></div>
+                            <div class="skill-icon"><i class="fab fa-golang" aria-hidden="true"></i></div>
                             <h4>Golang</h4>
                         </div>
                     </div>
@@ -507,27 +621,27 @@
                     <h3>Frameworks & Technologies</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-leaf"></i></div>
+                            <div class="skill-icon"><i class="fas fa-leaf" aria-hidden="true"></i></div>
                             <h4>Spring</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                            <div class="skill-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
                             <h4>Microservices</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-exchange-alt"></i></div>
+                            <div class="skill-icon"><i class="fas fa-exchange-alt" aria-hidden="true"></i></div>
                             <h4>Apache Kafka</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+                            <div class="skill-icon"><i class="fas fa-code-branch" aria-hidden="true"></i></div>
                             <h4>Vert.x</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                            <div class="skill-icon"><i class="fas fa-cloud" aria-hidden="true"></i></div>
                             <h4>API</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-sitemap"></i></div>
+                            <div class="skill-icon"><i class="fas fa-sitemap" aria-hidden="true"></i></div>
                             <h4>MVC</h4>
                         </div>
                     </div>
@@ -537,31 +651,31 @@
                     <h3>DevOps & Tools</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                            <div class="skill-icon"><i class="fab fa-git-alt" aria-hidden="true"></i></div>
                             <h4>Git & GitHub</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                            <div class="skill-icon"><i class="fab fa-docker" aria-hidden="true"></i></div>
                             <h4>Docker</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-dharmachakra"></i></div>
+                            <div class="skill-icon"><i class="fas fa-dharmachakra" aria-hidden="true"></i></div>
                             <h4>Kubernetes</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-hat-cowboy"></i></div>
+                            <div class="skill-icon"><i class="fas fa-hat-cowboy" aria-hidden="true"></i></div>
                             <h4>RedHat OpenShift</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                            <div class="skill-icon"><i class="fas fa-cogs" aria-hidden="true"></i></div>
                             <h4>Maven/Gradle</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-vial"></i></div>
+                            <div class="skill-icon"><i class="fas fa-vial" aria-hidden="true"></i></div>
                             <h4>JUnit/TestNG</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                            <div class="skill-icon"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
                             <h4>Jenkins</h4>
                         </div>
                     </div>
@@ -571,15 +685,15 @@
                     <h3>Methodologies</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-tasks"></i></div>
+                            <div class="skill-icon"><i class="fas fa-tasks" aria-hidden="true"></i></div>
                             <h4>SDLC</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-sync-alt"></i></div>
+                            <div class="skill-icon"><i class="fas fa-sync-alt" aria-hidden="true"></i></div>
                             <h4>Agile</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-list-ol"></i></div>
+                            <div class="skill-icon"><i class="fas fa-list-ol" aria-hidden="true"></i></div>
                             <h4>Scrum</h4>
                         </div>
                     </div>
@@ -588,21 +702,22 @@
         </div>
     </section>
 
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading">
         <div class="container">
-            <h2 class="section-title">What People Say</h2>
+            <div class="section-eyebrow" aria-hidden="true">05 — Testimonials</div>
+            <h2 id="testimonials-heading" class="section-title">What People Say</h2>
             <div class="testimonials-slider">
-                <div class="testimonial-container">
+                <div class="testimonial-container" id="testimonial-container">
                     <!-- Testimonial 1 - Manager's Recommendation -->
                     <div class="testimonial-card active">
                         <div class="testimonial-content">
-                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <div class="quote-icon"><i class="fas fa-quote-left" aria-hidden="true"></i></div>
                             <p>I've had the pleasure of working with Jojo Johnson on the IBM Event Automation team, and I can confidently say that he is an exceptional developer and leader. Jojo is not just focused on delivering product capabilities—he is deeply passionate about driving success through innovation and teamwork.</p>
                             <p>Jojo's expertise on Strimzi, the Open Source operator behind Event Streams, is impressive and has been pivotal to the team's success. What truly distinguishes him is his dedication to fostering a collaborative and growth-oriented culture.</p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <img src="img/1725631251952.jpeg" alt="Suraj CS" loading="lazy">
+                                <img src="img/1725631251952.jpeg" alt="Portrait of Suraj CS" loading="lazy" decoding="async">
                             </div>
                             <div class="author-info">
                                 <h4>Suraj CS</h4>
@@ -614,13 +729,13 @@
                     <!-- Testimonial 2 -->
                     <div class="testimonial-card">
                         <div class="testimonial-content">
-                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <div class="quote-icon"><i class="fas fa-quote-left" aria-hidden="true"></i></div>
                             <p>Jojo has made a significant impact across operations and deployments of the Event Streams component, a key backbone of the Event Automation product suite. He led the development of crucial integrations with third-party authenticators, improved user and admin functions, and enhanced the product's CLI and REST interfaces.</p>
                             <p>His proactive mindset, team coordination skills, and relentless pursuit of excellence make him an invaluable asset to any organization.</p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <img src="img/1725631251952.jpeg" alt="Suraj CS" loading="lazy">
+                                <img src="img/1725631251952.jpeg" alt="Portrait of Suraj CS" loading="lazy" decoding="async">
                             </div>
                             <div class="author-info">
                                 <h4>Suraj CS</h4>
@@ -632,13 +747,13 @@
                     <!-- Testimonial 3 -->
                     <div class="testimonial-card">
                         <div class="testimonial-content">
-                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <div class="quote-icon"><i class="fas fa-quote-left" aria-hidden="true"></i></div>
                             <p>What sets Jojo apart is how he consistently organizes educational sessions, encourages product enhancements, reduces tech debt, and inspires continuous improvement across the team. I highly recommend him for any future roles in event-driven architectures, operations, or development teams.</p>
                             <p>Would like to work with him again whenever possible, and wish him great luck on his academic and career pursuits in future!</p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <img src="img/1725631251952.jpeg" alt="Suraj CS" loading="lazy">
+                                <img src="img/1725631251952.jpeg" alt="Portrait of Suraj CS" loading="lazy" decoding="async">
                             </div>
                             <div class="author-info">
                                 <h4>Suraj CS</h4>
@@ -649,26 +764,27 @@
                 </div>
                 
                 <div class="testimonial-controls">
-                    <button class="testimonial-btn prev-btn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
-                    <div class="testimonial-dots">
-                        <span class="dot active" data-index="0" aria-label="Testimonial 1"></span>
-                        <span class="dot" data-index="1" aria-label="Testimonial 2"></span>
-                        <span class="dot" data-index="2" aria-label="Testimonial 3"></span>
+                    <button class="testimonial-btn prev-btn" aria-label="Previous testimonial" aria-controls="testimonial-container"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                    <div class="testimonial-dots" role="tablist" aria-label="Testimonial selector">
+                        <span class="dot active" data-index="0" role="tab" aria-selected="true" aria-label="Testimonial 1" tabindex="0"></span>
+                        <span class="dot" data-index="1" role="tab" aria-selected="false" aria-label="Testimonial 2" tabindex="-1"></span>
+                        <span class="dot" data-index="2" role="tab" aria-selected="false" aria-label="Testimonial 3" tabindex="-1"></span>
                     </div>
-                    <button class="testimonial-btn next-btn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                    <button class="testimonial-btn next-btn" aria-label="Next testimonial" aria-controls="testimonial-container"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="blog" class="blog">
+    <section id="blog" class="blog" aria-labelledby="blog-heading">
         <div class="container">
-            <h2 class="section-title">Technical Articles</h2>
+            <div class="section-eyebrow" aria-hidden="true">06 — Articles</div>
+            <h2 id="blog-heading" class="section-title">Technical Articles</h2>
             <div class="blog-grid">
                 <!-- Blog Post 1 -->
                 <div class="blog-card">
                     <div class="blog-img">
-                        <img src="https://picsum.photos/seed/java1/600/400" alt="Microservices Architecture" loading="lazy">
+                        <img src="https://picsum.photos/seed/java1/600/400" alt="Microservices architecture diagram with Spring Boot and Apache Kafka" loading="lazy" decoding="async">
                     </div>
                     <div class="blog-content">
                         <div class="blog-tag">Architecture</div>
@@ -676,7 +792,7 @@
                         <p>A deep dive into building robust microservices with event-driven architecture using Spring Boot and Apache Kafka.</p>
                         <div class="blog-footer">
                             <span class="blog-date">May 15, 2025</span>
-                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -684,7 +800,7 @@
                 <!-- Blog Post 2 -->
                 <div class="blog-card">
                     <div class="blog-img">
-                        <img src="https://picsum.photos/seed/java2/600/400" alt="Kubernetes Deployment" loading="lazy">
+                        <img src="https://picsum.photos/seed/java2/600/400" alt="Kubernetes deployment illustration for Spring Boot applications" loading="lazy" decoding="async">
                     </div>
                     <div class="blog-content">
                         <div class="blog-tag">DevOps</div>
@@ -692,7 +808,7 @@
                         <p>Learn how to implement zero-downtime deployments for your Spring Boot applications running in Kubernetes.</p>
                         <div class="blog-footer">
                             <span class="blog-date">April 3, 2025</span>
-                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -700,7 +816,7 @@
                 <!-- Blog Post 3 -->
                 <div class="blog-card">
                     <div class="blog-img">
-                        <img src="https://picsum.photos/seed/java3/600/400" alt="API Security" loading="lazy">
+                        <img src="https://picsum.photos/seed/java3/600/400" alt="API security shield representing Spring Security and OAuth2" loading="lazy" decoding="async">
                     </div>
                     <div class="blog-content">
                         <div class="blog-tag">Security</div>
@@ -708,66 +824,71 @@
                         <p>Comprehensive guide to implementing robust security for your APIs with Spring Security and OAuth2.</p>
                         <div class="blog-footer">
                             <span class="blog-date">March 21, 2025</span>
-                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="blog-cta">
-                <a href="#" class="btn secondary-btn">View All Articles</a>
+                <a href="#" class="btn secondary-btn">View All Articles <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
         <div class="container">
-            <h2 class="section-title">Contact Me</h2>
+            <div class="section-eyebrow" aria-hidden="true">07 — Contact</div>
+            <h2 id="contact-heading" class="section-title">Contact Me</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="info-item">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                         <div>
                             <h3>Email</h3>
                             <p>jojo4820@live.com</p>
                         </div>
                     </div>
                     <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         <div>
                             <h3>Bamberg</h3>
                             <p>Bavaria, Germany</p>
                         </div>
                     </div>
                     <div class="info-item">
-                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
                         <div>
                             <h3>Phone</h3>
                             <p>01746712321</p>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/j4real2208" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/jojojohnson4820/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/j4real2208" target="_blank" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span></a>
+                        <a href="https://www.linkedin.com/in/jojojohnson4820/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
+                        <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/xgegjoae" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/xgegjoae" method="POST" aria-labelledby="contact-heading">
                         <input type="hidden" name="_subject" value="New message from Portfolio Website">
-                        <input type="text" name="_gotcha" style="display:none">
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required aria-required="true">
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required aria-required="true">
                         </div>
                         <div class="form-group">
+                            <label for="subject">Subject</label>
                             <input type="text" id="subject" name="subject" placeholder="Subject">
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required aria-required="true"></textarea>
                         </div>
-                        <button type="submit" class="btn primary-btn">Send Message</button>
+                        <button type="submit" class="btn primary-btn">Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
                     </form>
                 </div>
             </div>
@@ -779,21 +900,22 @@
             <div class="footer-content">
                 <p>&copy; <span id="currentYear"></span> Jojo Johnson. All rights reserved.</p>
                 <div class="social-links">
-                    <a href="https://github.com/j4real2208" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/jojojohnson4820/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/j4real2208" target="_blank" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span></a>
+                    <a href="https://www.linkedin.com/in/jojojohnson4820/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
+                    <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
                 </div>
             </div>
         </div>
     </footer>
+    </main>
 
-    <a href="#home" class="scroll-to-top">
-        <i class="fas fa-arrow-up"></i>
+    <a href="#home" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </a>
 
-    <div class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon"></i>
-    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
 
     <script src="js/script.js"></script>
 </body>

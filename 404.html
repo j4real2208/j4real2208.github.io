@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0077b6" id="themeColor">
     <title>Page Not Found | Jojo Johnson</title>
+    <meta name="description" content="The page you are looking for doesn't exist or has been moved.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Page Not Found | Jojo Johnson">
+    <meta property="og:description" content="The page you are looking for doesn't exist or has been moved.">
+    <meta property="og:image" content="img/photo_jj.JPG">
+    <meta property="og:url" content="https://jojojohnson.dev/404.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Page Not Found | Jojo Johnson">
+    <meta name="twitter:description" content="The page you are looking for doesn't exist or has been moved.">
+    <meta name="twitter:image" content="img/photo_jj.JPG">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <style>
         .error-container {
@@ -21,11 +32,21 @@
             text-align: center;
             padding: 0 20px;
         }
+        .error-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-4, 20px);
+            opacity: 0.5;
+        }
         .error-code {
             font-size: 8rem;
             font-weight: 700;
-            color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color, #00b4d8));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 20px;
+            line-height: 1;
         }
         .error-message {
             font-size: 1.8rem;
@@ -35,21 +56,36 @@
             font-size: 1.2rem;
             margin-bottom: 30px;
             max-width: 600px;
+            color: var(--text-secondary, #6b7280);
         }
         .home-link {
             margin-top: 20px;
         }
+        .browse-link {
+            display: inline-block;
+            margin-top: 16px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .browse-link:hover {
+            color: var(--secondary-color, #00b4d8);
+        }
     </style>
 </head>
 <body>
-    <div class="error-container">
+    <main id="main-content" class="error-container">
+        <i class="fas fa-compass error-icon" aria-hidden="true"></i>
         <div class="error-code">404</div>
         <h1 class="error-message">Page Not Found</h1>
-        <p class="error-description">The page you are looking for doesn't exist or has been moved.</p>
+        <p class="error-description">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
         <a href="index.html" class="btn primary-btn home-link">
-            <i class="fas fa-home"></i> Back to Homepage
+            <i class="fas fa-home" aria-hidden="true"></i> Back to Homepage
         </a>
-    </div>
+        <a href="index.html#projects" class="browse-link">Browse my projects instead &rarr;</a>
+    </main>
 
     <script>
         // Apply dark mode if saved in local storage
